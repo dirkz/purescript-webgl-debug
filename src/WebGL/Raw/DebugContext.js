@@ -9,8 +9,7 @@ function throwOnGLError(err, funcName, args) {
 };
 
 function _makeDebugContext(ctx) {
-    ctxDebug = WebGLDebugUtils.makeDebugContext(ctx, throwOnGLError);
-    return ctxDebug;    
+    return WebGLDebugUtils.makeDebugContext(ctx, throwOnGLError);
 }
 
 exports.makeDebugContext = function(ctx) {
