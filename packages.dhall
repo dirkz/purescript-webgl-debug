@@ -123,6 +123,22 @@ let upstream =
 
 let overrides = {=}
 
-let additions = {=}
+let additions =
+  { webgl2-raw =
+       { dependencies =
+           [ "prelude"
+           , "effect"
+           , "arraybuffer-types"
+           , "nullable"
+           , "maybe"
+           , "unsafe-coerce"
+           , "web-html"
+           ]
+       , repo =
+           "https://github.com/dirkz/purescript-webgl2-raw.git"
+       , version =
+           "0bbd84a8201f8404a84b063b62338344223fbc7c"
+       }
+  }
 
 in  upstream // overrides // additions
